@@ -12,3 +12,8 @@ This class is termed "hybrid" because it allows for native trainable parameters 
 [`qsp_angle_estimation.ipynb`](https://github.com/jdocter/qsp/blob/main/qsp_angle_estimation.ipynb)
 
 Preliminary testing of QSP angle estimation in settings of noiseless X rotations. Results for both discrete and continuos. 
+
+
+[`noisy_qsp_angle_estimation.ipynb`](https://github.com/jdocter/qsp/blob/main/noisy_qsp_angle_estimation.ipynb)
+
+Preliminary support for QSP angle learning with noise.
