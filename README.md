@@ -1,7 +1,13 @@
 # Learning Quantum Signal Processing Angles 
 
-## Examples
+## How to use `qsp_models` and Examples
 ----------------------
+See [`example_qsp_discrete_propoerties.ipynb`](https://github.com/jdocter/qsp/blob/main/example_qsp_discrete_propoerties.ipynb) for a walkthrough of how to use `qsp_model.`
+
+See [`learning_qsp_angles.ipynb`](https://github.com/jdocter/qsp/blob/main/learning_qsp_angles.ipynb) for several examples of using `qsp_model` to learn qsp angles that approximate common QSP responses. 
+
+## Package `qsp_models` Info
+---------------------------
 
 `qsp_models` is a package intended to learn the QSP angles for a desired response function. 
 
