@@ -19,3 +19,8 @@ See [`example_qsp_discrete_propoerties.ipynb`](https://github.com/jdocter/qsp/bl
 See [`learning_qsp_angles.ipynb`](https://github.com/jdocter/qsp/blob/main/learning_qsp_angles.ipynb) for several examples of using `qsp_model` to learn qsp angles that approximate common QSP responses. 
 
 Preliminary testing of QSP angle estimation in settings of noiseless X rotations. Results for both discrete and continuos. 
+
+
+[`noisy_qsp_angle_estimation.ipynb`](https://github.com/jdocter/qsp/blob/main/noisy_qsp_angle_estimation.ipynb)
+
+Preliminary support for QSP angle learning with noise.
