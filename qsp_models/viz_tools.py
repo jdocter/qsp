@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import scipy
 import numpy as np
-from qsp_circuit import QSPCircuit 
+from . import QSPCircuit 
 
 def plot_qsp_response(f, model):
 	"""Plot the QSP response againts the desired function response.
@@ -36,8 +36,8 @@ def plot_loss(history):
 	------
 	history : tensorflow `History` object
 	"""
-    plt.plot(history.history['loss'])
-    plt.title("Learning QSP Angles")
-    plt.xlabel("Iterations")
-    plt.ylabel("Error")
-    plt.show()
+	plt.plot(history.history['loss'])
+	plt.title("Learning QSP Angles")
+	plt.xlabel("Iterations")
+	plt.ylabel("Error")
+	plt.show()
