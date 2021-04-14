@@ -1,5 +1,7 @@
 # Learning Quantum Signal Processing Angles 
 
+## Examples
+----------------------
 
 `qsp_models` is a package intended to learn the QSP angles for a desired response function. 
 
@@ -17,9 +19,3 @@
 	
 `qsp_model.plot_qsp_response` is a helper function to plot the error of a trained QSP model 
   
-
-See [`example_qsp_discrete_propoerties.ipynb`](https://github.com/jdocter/qsp/blob/main/example_qsp_discrete_propoerties.ipynb) for a walkthrough of how to use `qsp_model.`
-
-See [`learning_qsp_angles.ipynb`](https://github.com/jdocter/qsp/blob/main/learning_qsp_angles.ipynb) for several examples of using `qsp_model` to learn qsp angles that approximate common QSP responses. 
-
-
