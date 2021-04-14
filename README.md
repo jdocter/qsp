@@ -1,14 +1,21 @@
-# Quantum Signal Processing Angle Learning via Gradient Descent
-
-[`qsp_layers.py`](https://github.com/jdocter/qsp/blob/main/qsp_layers.py)
-
-contains class `HybridControlledPQC` (Hybrid Controlled Parameterized Quantum Circuit)
-
-This is a keras layer for a controlled parameterized quantum circuit similar to [this](https://www.tensorflow.org/quantum/api_docs/python/tfq/layers/ControlledPQC). 
-
-This class is termed "hybrid" because it allows for native trainable parameters within the model, in addition to controlled parameters. Controlled parameters are those that are fed into the circuit model as inputs. In the case of QSP, the native trainable parameters are the Z rotation arguments/angles. The controlled parameter is the unknown angle theta or equivalently x = cos(theta).
+# Learning Quantum Signal Processing Angles 
 
 
-[`qsp_angle_estimation.ipynb`](https://github.com/jdocter/qsp/blob/main/qsp_angle_estimation.ipynb)
+`qsp_model` is a package intended to learn the QSP angles for a desired response function. 
+
+class `qsp_model.QSP` is a arameterized quantum signal processing layer. Parameterized by the $\phi$ angles.  
+
+function `qsp_model.construct_qsp_model` is a helper function that compiles a QSP model with mean squared error and adam optimizer.
+
+class `qsp_model.QSPCircuit` is a `cirq.Circuit` that implements the QSP sequence given by `phis`. It is a tool to evaluate and visualize the response of a given QSP sequence, by supporting substitution of arbitrary theta into the sequence.
+
+function `qsp_model.plot_loss` is a helper function to plot the QSP response againts the desired function response.
+	
+function `qsp_model.plot_qsp_response` is a helper function to plot the error of a trained QSP model 
+  
+
+See [`example_qsp_discrete_propoerties.ipynb`](https://github.com/jdocter/qsp/blob/main/example_qsp_discrete_propoerties.ipynb) for a walkthrough of how to use `qsp_model.`
+
+See [`learning_qsp_angles.ipynb`](https://github.com/jdocter/qsp/blob/main/learning_qsp_angles.ipynb) for several examples of using `qsp_model` to learn qsp angles that approximate common QSP responses. 
 
 Preliminary testing of QSP angle estimation in settings of noiseless X rotations. Results for both discrete and continuos. 
