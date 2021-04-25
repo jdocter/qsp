@@ -74,7 +74,7 @@ class QSP(keras.layers.Layer):
             u = tf.matmul(u, rz)
 
         # assume we are interested int he real part of p(x) in the resulting qsp unitary
-        return tf.math.real(u[:, 0, 0])
+        return tf.math.real(u[:, 0, 0]), tf.math.real(u[:, 0, 1])
 
 
 def construct_qsp_model(poly_deg):
@@ -92,8 +92,8 @@ def construct_qsp_model(poly_deg):
     """
     theta_input = tf.keras.Input(shape=(1,), dtype=tf.float32, name="theta")
     qsp = QSP(poly_deg)
-    real_px = qsp(theta_input)
-    model = tf.keras.Model(inputs=theta_input, outputs=real_px)
+    real_parts = qsp(theta_input)
+    model = tf.keras.Model(inputs=theta_input, outputs=real_parts)
     optimizer = tf.keras.optimizers.Adam(learning_rate=0.1)
     loss = tf.keras.losses.MeanSquaredError()
     model.compile(optimizer=optimizer, loss=loss)
